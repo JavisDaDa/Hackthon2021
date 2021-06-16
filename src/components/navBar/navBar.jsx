@@ -3,6 +3,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from "react-bootstrap/Nav";
 import Badge from "react-bootstrap/Badge";
 
+const config = require('../../config');
 class NavigationBar extends Component {
 
     render() {
@@ -17,7 +18,7 @@ class NavigationBar extends Component {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
                         <Badge pill variant="success">
-                            Customer ID is {this.props.getCustomerId()}
+                            Customer ID is {config.customerId}
                         </Badge>
                     </Nav>
                 </Navbar.Collapse>

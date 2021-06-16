@@ -4,37 +4,8 @@ import InputForm from "./InputForm";
 
 class AutomationTable extends Component {
 
-    columns = [
-        {
-            title: "",
-            width: 40,
-            dataIndex: "icon",
-            key: "icon",
-            fixed: "left",
-        },
-        {
-            title: "Name",
-            width: 50,
-            dataIndex: "friendlyName",
-            key: "friendlyName",
-            fixed: "left"
-        },
-        {
-            title: "ID",
-            width: 200,
-            dataIndex: "id",
-            key: "id",
-            fixed: "left"
-        },
-        {
-            title: 'Action',
-            key: 'operation',
-            width: 400,
-        }
-    ];
-
     render() {
-        const {callAssociateApi, callGetAutomationApi} = this.props;
+        const {callAssociateApi, callGetAutomationApi, getAutomation} = this.props;
         return (
             <Layout style={{minHeight: '100vh'}}>
                 <Layout className="site-layout" style={{marginTop: '12'}}>
@@ -43,7 +14,7 @@ class AutomationTable extends Component {
                             callAssociateApi={callAssociateApi}
                             callGetAutomationApi={callGetAutomationApi}
                         />
-                        <Table/>
+                        <div><pre>{JSON.stringify(getAutomation(), null, 2) }</pre></div>
                     </div>
                 </Layout>
             </Layout>

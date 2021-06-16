@@ -7,10 +7,21 @@ const config = require('../../config');
 class Automation extends Component {
 
     state = {
+        automation: {}
     };
 
+    setAutomation = (data) => {
+        this.setState({
+            automation: data
+        })
+    }
+
+    getAutomation = () => {
+        return this.state.automation;
+    }
+
     handleCallAssociateApi = async () => {
-        let url = "/v3/automations/" + config.automationId + "/associatedUnits"
+        let url = "/v3/automations/" + this.props.getAutomationId() + "/associatedUnits"
         let token = config.lwaToken;
         let units = {
             "units": [{
@@ -33,26 +44,42 @@ class Automation extends Component {
         })
         console.log('automationId is' + this.props.getAutomationId())
         console.log('lwaToken is ' + token)
-        console.log('customerId is' + this.props.getCustomerId())
+        console.log('customerId is' + config.customerId)
         console.log("path is " + url)
+        this.props.setAutomationId("amzn1.alexa.automation.90d43d2b-0d69-4ced-96e4-ac48de131026")
     }
 
     handleCallGetAutomationApi = () => {
-        console.log('customerId is' + this.props.getCustomerId())
-        console.log('lwaToken is' + this.props.getLwaToken())
+        let url = "/v3/automations/" + this.props.getAutomationId();
+        console.log(url)
+        let token = config.lwaToken;
+        axios.get(url, {
+            headers: {
+                "Accept":"application/json",
+                "Content-Type":"application/json; charset=utf-8",
+                "Authorization": 'Bearer ' + token
+            },
+            withCredentials: true
+        }).then(response => {
+            console.log(response.data)
+            this.setAutomation(response.data);
+            console.log(this.state.automation)
+        }).catch(error => {
+            console.log(error)
+        })
+        console.log('customerId is' + config.customerId)
+        console.log('lwaToken is' + config.lwaToken)
         console.log('automationId is' + this.props.getAutomationId())
     }
 
 
     render() {
-        const {getCustomerId, getLwaToken} = this.props;
-        const {handleCallAssociateApi, handleCallGetAutomationApi} = this;
+        const {handleCallAssociateApi, handleCallGetAutomationApi, getAutomation} = this;
         return (
             <AutomationTable
-                getCustomerId={getCustomerId}
-                getLwaToken={getLwaToken}
                 callAssociateApi={handleCallAssociateApi}
                 callGetAutomationApi={handleCallGetAutomationApi}
+                getAutomation={getAutomation}
             />
         );
     }
