@@ -8,7 +8,7 @@ class Main extends Component {
         this.state = {
             customerID: "A34SBJJTZXA0NN",
             automationID: "amzn1.alexa.automation.90d43d2b-0d69-4ced-96e4-ac48de131026",
-            token: "Atza|IgEBIO905SKoiwBtoUgcRCOmA09Pqvb2jFmljSMyf1LTrkTrnG6bWrGrTMbG732uQvE-6BkgyBmq6UTT5e9Uj9i91YvaGwSt4Uh6t4Ncoi_3cHBH-tUWU-QaB0dyq_NiblnQ8EiJb_UkdSLRGive--Gp5OKE5cp5umKghj5bjCS1WpeI-7ffWklWZXw7dr-sTkc8n1C6uQR3ZS4V3iX7cl2gzyBWMGN8a0pgP5sOVvQHaJxCwpgDSFr6qiNGA355NlK0pmKgEUQx0mHClmLGAojdGUKFvEScwa5JW-4ibdy6Rs5lBTE21fcM7L-9FdSJqi2nLHEPHHDywCrtfmgq-rne-UlipfT4lLiRsw42bpiehiyUfxIifOKxAMC9lowxMr8gV5sCIL9yTwckk3okzMl3CsQ-"
+            token: "Atza|IgEBICP8-3tqNR2u-vAzx3ax7MZsxLWC7-CqLe6YhfTixG-UCSLosYPS9bW1LC89Agmq5eMZ2AZZkosVQtYkkIxr2zzm7OMo0Qs05RlEsRpHGety4FbZCIy1HhojGZv1MkejJw3n_H6uEdarsJDTKcJOw40OHP3kzPRB26nv3ouQW4-zZWf30mrrPgdRUfW0q47wabOnd3gbaGVd81o4jleF72tyn9QE9Q3ZUhx5kVpt2CbZtcYPq4fjnfnpzEXItSdSUif3pRmk13XiqumOCL5MKPtU6gJxOUTBhEsTEzvgY-dG30FqIfMXNi89QYIVc-08IKerSQgM_nSY-yhSfRmhmD_r3EVc9E-HdM1_VkIDJ6EfzcG1S8MRxiz-3bFWRzrTqApX4wVU17UDfxZ2_R2SEnKq"
         };
     }
 

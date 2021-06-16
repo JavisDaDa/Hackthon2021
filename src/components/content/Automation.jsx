@@ -9,26 +9,21 @@ class Automation extends Component {
     state = {
     };
 
-
     handleCallAssociateApi = async () => {
-        let betaEndpoint = config.betaEndpointPath;
-        let url = betaEndpoint + "/v3/automations/" + this.props.getAutomationId() + "/associatedUnits"
-        let token = this.props.getLwaToken();
+        let url = "/v3/automations/" + config.automationId + "/associatedUnits"
+        let token = config.lwaToken;
         let units = {
             "units": [{
-                "id": this.props.getCustomerId()
+                "id": config.customerId
             }]
         }
         axios.post(url, {
             units
         },{
             headers: {
-                "Accept-Charset": "utf-8",
                 "Accept":"application/json",
                 "Content-Type":"application/json; charset=utf-8",
-                "Authorization": 'Bearer ' + token,
-                "Access-Control-Allow-Origin": "*",
-                "Access-Control-Allow-Credentials": true
+                "Authorization": 'Bearer ' + token
             },
             withCredentials: true
         }).then(response => {
