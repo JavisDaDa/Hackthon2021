@@ -4,11 +4,11 @@ import {Button} from "antd";
 class InputForm extends Component {
 
     render() {
-        const {getCustomerId, getLwaToken, callAssociateApi, callGetAutomationApi} = this.props;
+        const {callAssociateApi, callGetAutomationApi} = this.props;
         return (
             <div style={{marginBottom: 10}}>
-                <Button onClick={() => callAssociateApi(getCustomerId())}>Subscribe!</Button>
-                <Button onClick={() => callGetAutomationApi(getLwaToken())}>Show my Routines!</Button>
+                <Button onClick={() => callAssociateApi()}>Subscribe!</Button>
+                <Button onClick={() => callGetAutomationApi()}>Show my Routines!</Button>
             </div>
         )
     }

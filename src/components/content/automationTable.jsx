@@ -34,14 +34,12 @@ class AutomationTable extends Component {
     ];
 
     render() {
-        const {getCustomerId, getLwaToken, callAssociateApi, callGetAutomationApi} = this.props;
+        const {callAssociateApi, callGetAutomationApi} = this.props;
         return (
             <Layout style={{minHeight: '100vh'}}>
                 <Layout className="site-layout" style={{marginTop: '12'}}>
                     <div>
                         <InputForm
-                            getCustomerId={getCustomerId}
-                            getLwaToken={getLwaToken}
                             callAssociateApi={callAssociateApi}
                             callGetAutomationApi={callGetAutomationApi}
                         />
