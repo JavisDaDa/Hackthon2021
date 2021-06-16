@@ -13,7 +13,7 @@ class NavigationBar extends Component {
                     <img src="https://m.media-amazon.com/images/G/01/AlexaDevPortal/favicon-32x32._CB1544644721_.png"
                          alt="Alexa Catalog Portal"
                     />{' '}
-                    Michale has shared a routine with you!</Navbar.Brand>
+                    Michael has shared a routine with you!</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">

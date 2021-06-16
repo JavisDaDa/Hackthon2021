@@ -74,12 +74,16 @@ class Automation extends Component {
 
 
     render() {
-        const {handleCallAssociateApi, handleCallGetAutomationApi, getAutomation} = this;
+        const {handleCallAssociateApi, handleCallGetAutomationApi, getAutomation, setAutomation} = this;
+        const {setAutomationId, getAutomationId} = this.props;
         return (
             <AutomationTable
                 callAssociateApi={handleCallAssociateApi}
                 callGetAutomationApi={handleCallGetAutomationApi}
                 getAutomation={getAutomation}
+                setAutomation={setAutomation}
+                setAutomationId={setAutomationId}
+                getAutomationId={getAutomationId}
             />
         );
     }

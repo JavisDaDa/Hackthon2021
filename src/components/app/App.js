@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 
 import Main from "./main";
+import {ToastContainer} from "react-toastify";
 
 class App extends Component {
 
@@ -8,6 +9,7 @@ class App extends Component {
         return (
             <div className="App">
                 <Main/>
+                <ToastContainer/>
             </div>
         );
     }
